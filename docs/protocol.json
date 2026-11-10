@@ -123,6 +123,6 @@
   "numeric_rules": "Nonpositive areas and negative/missing unit counts become missing; construction year <1600 or after sale year becomes missing. Impute within training windows; retain all price upper tails.",
   "deduplication": "Exact original-field duplicates only; retain repeated parcel sales.",
   "selection": "Unweighted mean of three window log MAEs; ties prefer larger alpha.",
-  "test_policy": "Save holdout and count parcel overlap only. No test predictions or scores.",
+  "test_policy": "Keep the holdout separate in memory and count parcel overlap only. No test predictions or scores.",
   "source": "https://www.nyc.gov/site/finance/property/property-rolling-sales-data.page"
 }
