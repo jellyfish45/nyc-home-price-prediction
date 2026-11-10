@@ -1,0 +1,22 @@
+[
+  {
+    "file": "rollingsales_bronx.xlsx",
+    "sha256": "ed2895d5f4e11f22456bf52f22cfa4dea1c9d484c413411dc156a21788334a96"
+  },
+  {
+    "file": "rollingsales_brooklyn.xlsx",
+    "sha256": "9afce0b44b06d0e06a57a9927f1f02b09f307149662a2e50404e05baf29bcd91"
+  },
+  {
+    "file": "rollingsales_manhattan.xlsx",
+    "sha256": "b1c64d6f0e9de06e22d711449de4fa2b0502f8ca1f1df40fdda3883617fe37b0"
+  },
+  {
+    "file": "rollingsales_queens.xlsx",
+    "sha256": "4db0d2551c2a78bba6c9c717a6419f597a5cebea3e94034b6c4bbcc7343db11c"
+  },
+  {
+    "file": "rollingsales_statenisland.xlsx",
+    "sha256": "e6c68ec5f3280b8f20df191e7c84dbcd1a6c31e6d99cc5075d988c83986aab9f"
+  }
+]

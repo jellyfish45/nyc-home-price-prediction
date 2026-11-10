@@ -1,0 +1,128 @@
+{
+  "price_floor": 10000,
+  "home_category_prefixes": [
+    "01",
+    "02",
+    "03"
+  ],
+  "period_start": "2025-10-01",
+  "period_end_exclusive": "2026-10-01",
+  "test_start": "2026-07-01",
+  "windows": [
+    {
+      "name": "Jan-Feb 2026",
+      "start": "2026-01-01",
+      "end": "2026-03-01"
+    },
+    {
+      "name": "Mar-Apr 2026",
+      "start": "2026-03-01",
+      "end": "2026-05-01"
+    },
+    {
+      "name": "May-Jun 2026",
+      "start": "2026-05-01",
+      "end": "2026-07-01"
+    }
+  ],
+  "ridge_alphas": [
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0,
+    100000.0,
+    1000000.0,
+    10000000.0,
+    100000000.0
+  ],
+  "ridge_solver": "lsqr",
+  "ridge_tolerance": 1e-06,
+  "category_min_frequency": 10,
+  "bootstrap_replicates": 1000,
+  "seed": 5420,
+  "xgboost_grid": [
+    {
+      "max_depth": 3,
+      "learning_rate": 0.03,
+      "reg_lambda": 1
+    },
+    {
+      "max_depth": 3,
+      "learning_rate": 0.03,
+      "reg_lambda": 10
+    },
+    {
+      "max_depth": 3,
+      "learning_rate": 0.1,
+      "reg_lambda": 1
+    },
+    {
+      "max_depth": 3,
+      "learning_rate": 0.1,
+      "reg_lambda": 10
+    },
+    {
+      "max_depth": 5,
+      "learning_rate": 0.03,
+      "reg_lambda": 1
+    },
+    {
+      "max_depth": 5,
+      "learning_rate": 0.03,
+      "reg_lambda": 10
+    },
+    {
+      "max_depth": 5,
+      "learning_rate": 0.1,
+      "reg_lambda": 1
+    },
+    {
+      "max_depth": 5,
+      "learning_rate": 0.1,
+      "reg_lambda": 10
+    },
+    {
+      "max_depth": 7,
+      "learning_rate": 0.03,
+      "reg_lambda": 1
+    },
+    {
+      "max_depth": 7,
+      "learning_rate": 0.03,
+      "reg_lambda": 10
+    },
+    {
+      "max_depth": 7,
+      "learning_rate": 0.1,
+      "reg_lambda": 1
+    },
+    {
+      "max_depth": 7,
+      "learning_rate": 0.1,
+      "reg_lambda": 10
+    }
+  ],
+  "xgboost_fixed": {
+    "n_estimators": 300,
+    "objective": "reg:squarederror",
+    "tree_method": "hist",
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "n_jobs": 2,
+    "random_state": 5420
+  },
+  "bootstrap_dry_run": {
+    "window": "May-Jun 2026",
+    "ridge_alpha": 1.0,
+    "xgboost_grid_index": 0
+  },
+  "numeric_rules": "Nonpositive areas and negative/missing unit counts become missing; construction year <1600 or after sale year becomes missing. Impute within training windows; retain all price upper tails.",
+  "deduplication": "Exact original-field duplicates only; retain repeated parcel sales.",
+  "selection": "Unweighted mean of three window log MAEs; ties prefer larger alpha.",
+  "test_policy": "Save holdout and count parcel overlap only. No test predictions or scores.",
+  "source": "https://www.nyc.gov/site/finance/property/property-rolling-sales-data.page"
+}
