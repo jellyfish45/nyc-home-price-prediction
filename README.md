@@ -35,8 +35,4 @@ Open `notebooks/01_baseline.ipynb` and run all cells in order.
 
 ## Data and evaluation
 
-The [NYC Department of Finance dataset](https://www.nyc.gov/site/finance/property/property-rolling-sales-data.page) contains 82,576 sales in the frozen October 2025–September 2026 snapshot. Categories 01–03 and a $10,000 minimum leave 18,672 observations. The price screen does not certify market-value transactions.
-
-## AI assistance
-
-Codex assisted with implementation and editing. Group members should review the retained code, independently rerun the analysis, and verify numerical claims before submission.
+The [NYC Department of Finance dataset](https://www.nyc.gov/site/finance/property/property-rolling-sales-data.page) contains 82,576 sales in the frozen October 2025–September 2026 snapshot. Categories 01–03 and a $10,000 minimum leave 18,672 observations.
